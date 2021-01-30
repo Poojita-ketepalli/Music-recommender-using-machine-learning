@@ -33,7 +33,7 @@ def prediction():
     else:
         g = 0
     predictions = model.predict([[int(age.get()), g]])
-    answer.set(predictions)
+    answer.set(predictions[0])
 
 
 predict_btn = Button(frame1, text="Predict", font=("times new roman", 13), fg="black", command=prediction)
